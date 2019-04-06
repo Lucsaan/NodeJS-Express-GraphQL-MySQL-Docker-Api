@@ -9,6 +9,7 @@ import "reflect-metadata";
 
 
 const app = express();
+// @ts-ignore
 const server = new ApolloServer({
     schema,
     validationRules: [depthLimit(7)],
@@ -19,4 +20,4 @@ server.applyMiddleware({ app, path: '/graphql' });
 const httpServer = createServer(app);
 httpServer.listen(
     { port: 3000},
-    (): void => console.log(`\n🚀      GraphQL is now running on http://guschtel.org:3000/graphql`));
+    (): void => console.log(`\n🚀      GraphQL is now running on http://localhost:3000/graphql`));
