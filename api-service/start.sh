@@ -3,7 +3,9 @@
 cd /app/api/
 npm install
 
+sleep 10
+
 cd /app/api/
-npm start:dev
+npm start
 
 
